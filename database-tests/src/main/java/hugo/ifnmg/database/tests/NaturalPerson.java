@@ -36,14 +36,14 @@ public class NaturalPerson extends Entity {
         if (Util.isValidCPF(CPF))
             this.CPF = CPF;
         else
-            throw new IllegalArgumentException("Invalid CPF.");
+            throw new IllegalArgumentException(">> Invalid CPF.");
     }
     public String getName() {
         return name;
     }
     public void setName(String name) {
         if (name.length() > 50)
-            throw new IllegalArgumentException("Invalid name size.");
+            throw new IllegalArgumentException(">> Invalid name size.");
         this.name = name;
     }
     public String getEmail() {

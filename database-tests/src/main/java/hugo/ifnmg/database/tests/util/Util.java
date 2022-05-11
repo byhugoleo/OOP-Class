@@ -28,7 +28,7 @@ public class Util {
         } catch (InputMismatchException ex) {
             return false;
         }
-        if (isEqualDigit != 0) {
+        if (isEqualDigit == 0) {
             return false;
         }
         
@@ -46,6 +46,7 @@ public class Util {
             sumDigit10 = 0;
         digit10 = (char)(sumDigit10 + '0');
         
+        sumDigit11 += (int)(digit10 - '0') * weight11;
         sumDigit11 = (11 - (sumDigit11 % 11));
         if (sumDigit11 >= 10)
             sumDigit11 = 0;

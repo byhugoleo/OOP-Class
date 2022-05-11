@@ -15,6 +15,7 @@ public class Util {
      * @return CPF validation
      */
     public static boolean isValidCPF(String CPF) {
+        CPF = CPF.replaceAll("[\\..*-]", "");
         if (CPF.length() != 11)
             return false;
         
@@ -52,8 +53,6 @@ public class Util {
             sumDigit11 = 0;
         digit11 = (char)(sumDigit11 + '0');
         
-        if (digit10 == CPF.charAt(9) && digit11 == CPF.charAt(10))
-            return true;
-        return false;
+        return digit10 == CPF.charAt(9) && digit11 == CPF.charAt(10);
     }
 }

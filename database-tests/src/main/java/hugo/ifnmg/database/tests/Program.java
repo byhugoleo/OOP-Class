@@ -18,5 +18,8 @@ public class Program {
         
         CPF = "12345678912";
         System.out.println(Util.isValidCPF(CPF));
+        
+        CPF = "100.126.666-88";
+        System.out.println(Util.isValidCPF(CPF));
     }
 }

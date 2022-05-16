@@ -61,4 +61,26 @@ public class Util {
         
         return digit10 == CPF.charAt(9) && digit11 == CPF.charAt(10);
     }
+    /**
+     * Verify the validity of a name
+     * 
+     * @param name: name to be validated
+     * @return name validation
+     */
+    public static boolean isValidName(String name) {
+        final Pattern pattern = Pattern.compile("^[\\p{L} .'-]+$");
+        final Matcher matcher = pattern.matcher(name);
+        return matcher.matches();
+    }
+    /**
+     * Verify the validity of a e-mail
+     * 
+     * @param email: e-mail to be validated
+     * @return e-mail validation
+     */
+    public static boolean isValidEmail(String email) {
+        final Pattern pattern = Pattern.compile("^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$");
+        final Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
+    }
 }

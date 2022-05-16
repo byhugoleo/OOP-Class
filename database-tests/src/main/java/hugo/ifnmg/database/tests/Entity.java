@@ -7,21 +7,21 @@ package hugo.ifnmg.database.tests;
  */
 public abstract class Entity {
 // Properties
-    private String ID;
+    private Long ID;
     
 //<editor-fold defaultstate="collapsed" desc="Constructors">
     public Entity() {
     }
-    public Entity(String ID) {
+    public Entity(Long ID) {
         this.ID = ID;
     }
 //</editor-fold>
     
 //<editor-fold defaultstate="collapsed" desc="Getters/Setters">
-    public String getID() {
+    public Long getID() {
         return ID;
     }
-    public void setID(String ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 //</editor-fold>

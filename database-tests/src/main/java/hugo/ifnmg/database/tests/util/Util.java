@@ -1,6 +1,8 @@
 package hugo.ifnmg.database.tests.util;
 
 import java.util.InputMismatchException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Utilitaries
@@ -15,7 +17,11 @@ public class Util {
      * @return CPF validation
      */
     public static boolean isValidCPF(String CPF) {
-        CPF = CPF.replaceAll("[\\..*-]", "");
+        final Pattern pattern = Pattern.compile("^\\d{3}\\.?\\d{3}\\.?\\d{3}\\-?\\d{2}$");
+        final Matcher matcher = pattern.matcher(CPF);
+        if (!matcher.matches())
+            return false;
+        CPF = CPF.replaceAll("[.-]", "");
         if (CPF.length() != 11)
             return false;
         

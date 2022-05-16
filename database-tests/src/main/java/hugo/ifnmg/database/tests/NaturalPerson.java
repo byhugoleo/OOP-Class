@@ -8,7 +8,7 @@ import java.time.LocalDate;
  * 
  * @author byhugoleo
  */
-public class NaturalPerson extends Entity {
+public final class NaturalPerson extends Entity {
 // Properties
     private String CPF;
     private String name;
@@ -20,9 +20,9 @@ public class NaturalPerson extends Entity {
     public NaturalPerson() {
     }
     public NaturalPerson(String CPF, String name, String email, LocalDate birth, Boolean active) {
-        super(CPF);
-        this.name = name;
-        this.email = email;
+        setCPF(CPF);
+        setName(name);
+        setEmail(email);
         this.birth = birth;
         this.active = active;
     }
@@ -32,25 +32,32 @@ public class NaturalPerson extends Entity {
     public String getCPF() {
         return CPF;
     }
-    public void setCPF(String CPF) {
-        if (Util.isValidCPF(CPF))
+    public void setCPF(String CPF) throws IllegalArgumentException {
+        if (Util.isValidCPF(CPF)) {
+            CPF = CPF.replaceAll("[.-]", "");
             this.CPF = CPF;
-        else
+        } else
             throw new IllegalArgumentException(">> Invalid CPF.");
     }
     public String getName() {
         return name;
     }
-    public void setName(String name) {
+    public void setName(String name) throws IllegalArgumentException {
         if (name.length() > 50)
             throw new IllegalArgumentException(">> Invalid name size.");
-        this.name = name;
+        if (Util.isValidName(name))
+            this.name = name;
+        else
+            throw new IllegalArgumentException(">> Invalid name.");
     }
     public String getEmail() {
         return email;
     }
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmail(String email) throws IllegalArgumentException {
+        if (Util.isValidEmail(email))
+            this.email = email;
+        else
+            throw new IllegalArgumentException(">> Invalid email.");
     }
     public LocalDate getBirth() {
         return birth;

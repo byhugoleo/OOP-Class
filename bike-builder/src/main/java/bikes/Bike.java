@@ -36,4 +36,12 @@ public class Bike {
         this.color = color;
     }
 //</editor-fold>
+    
+    @Override
+    public String toString() {
+        String text;
+        text = ">>\\ Bike={BikeType=" + type.name()
+                + ", Color=" + color + "}";
+        return text;
+    }
 }

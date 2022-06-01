@@ -1,7 +1,7 @@
 package hugo.ifnmg.bike.builder;
 
-import bikes.Bike;
-import director.Director;
+import hugo.ifnmg.bike.builder.bikes.Bike;
+import hugo.ifnmg.bike.builder.director.Director;
 import hugo.ifnmg.bike.builder.builders.BikeBuilder;
 
 /**

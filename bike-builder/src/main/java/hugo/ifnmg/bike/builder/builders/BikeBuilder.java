@@ -1,7 +1,7 @@
 package hugo.ifnmg.bike.builder.builders;
 
-import bikes.Bike;
-import bikes.BikeType;
+import hugo.ifnmg.bike.builder.bikes.Bike;
+import hugo.ifnmg.bike.builder.bikes.BikeType;
 
 /**
  * Concrete builders implement steps defined in the common interface.

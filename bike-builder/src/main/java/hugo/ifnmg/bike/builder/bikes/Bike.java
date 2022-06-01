@@ -1,4 +1,4 @@
-package bikes;
+package hugo.ifnmg.bike.builder.bikes;
 
 /**
  * Bike is a product class.

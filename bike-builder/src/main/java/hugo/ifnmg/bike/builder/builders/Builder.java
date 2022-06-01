@@ -1,5 +1,5 @@
 package hugo.ifnmg.bike.builder.builders;
-import bikes.BikeType;
+import hugo.ifnmg.bike.builder.bikes.BikeType;
 
 /**
  * Builder interface defines all possible ways to configure a product.

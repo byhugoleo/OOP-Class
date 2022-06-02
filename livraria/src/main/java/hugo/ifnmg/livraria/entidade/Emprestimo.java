@@ -15,5 +15,6 @@ public class Emprestimo {
     private LocalDate dataDevolucaoLimite;
     private String observacao;
     
+    //TODO Constructor, getters/setters
     
 }

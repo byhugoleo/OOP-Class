@@ -12,4 +12,5 @@ import java.util.List;
  */
 public class Funcionario extends Pessoa{
     List <Emprestimo> emprestimos;
+    //TODO relacionamentos
 }

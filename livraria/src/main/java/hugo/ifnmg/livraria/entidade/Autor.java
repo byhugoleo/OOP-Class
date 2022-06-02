@@ -76,5 +76,17 @@ public class Autor {
 
 //</editor-fold>
 
+    @Override
+    public String toString() {
+        return "Autor{" 
+                + "nome=" + nome 
+                + ", dataNascimento=" + dataNascimento 
+                + ", dataFalescimento=" + dataFalescimento 
+                + ", localFalescimento=" + localFalescimento 
+                + ", biografia=" + biografia 
+                + '}';
+    }
+
+    
     
 }

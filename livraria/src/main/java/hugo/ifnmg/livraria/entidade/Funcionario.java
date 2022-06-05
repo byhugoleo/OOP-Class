@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Classe Funcionário.
  */
-public class Funcionario extends Pessoa{
+public class Funcionario extends Pessoa {
 // Propriedades
     List <Emprestimo> emprestimos;
     //TODO relacionamentos

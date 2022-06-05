@@ -5,7 +5,7 @@ import java.time.LocalDate;
 /**
  *
  */
-public class Emprestimo {
+public class Emprestimo extends Entidade {
 // Propriedades
     private Funcionario funcionario;
     private Exemplar exemplar;

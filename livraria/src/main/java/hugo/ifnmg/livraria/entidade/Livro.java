@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Classe Livro.
  */
-public class Livro {
+public class Livro extends Entidade {
     private String titulo;
     private Integer edicao;
     private List<Autor> autores;

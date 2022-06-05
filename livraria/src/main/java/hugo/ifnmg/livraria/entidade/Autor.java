@@ -5,7 +5,7 @@ import java.time.LocalDate;
 /**
  *
  */
-public class Autor {
+public class Autor extends Entidade {
 // Propriedades
     private String nome;
     private LocalDate dataNascimento;

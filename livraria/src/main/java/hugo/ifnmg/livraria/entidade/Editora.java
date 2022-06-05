@@ -3,17 +3,17 @@ package hugo.ifnmg.livraria.entidade;
 /**
  *
  */
-public class Editora {
+public class Editora extends Entidade{
 // Propriedades
     private String nome;
     private String endereco;
     private Long telefone;
-    private Long cnpj;
+    private String cnpj;
     
 //<editor-fold defaultstate="collapsed" desc="Construtores">
     public Editora() {}
 
-    public Editora(String nome, String endereco, Long telefone, Long cnpj) {
+    public Editora(String nome, String endereco, Long telefone, String cnpj) {
         this.nome = nome;
         this.endereco = endereco;
         this.telefone = telefone;
@@ -46,11 +46,11 @@ public class Editora {
         this.telefone = telefone;
     }
 
-    public Long getCnpj() {
+    public String getCnpj() {
         return cnpj;
     }
 
-    public void setCnpj(Long cnpj) {
+    public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
     }
 //</editor-fold>

@@ -3,7 +3,7 @@ package hugo.ifnmg.livraria.entidade;
 /**
  *
  */
-public class Genero {
+public class Genero extends Entidade {
 // Propriedades
     private String nome;
 

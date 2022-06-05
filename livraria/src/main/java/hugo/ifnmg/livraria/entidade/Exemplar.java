@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 
  */
-public class Exemplar {
+public class Exemplar extends Entidade {
 // Propriedades
     private Integer codigo;
     private Boolean disponivel;

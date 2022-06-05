@@ -3,20 +3,15 @@ package hugo.ifnmg.livraria.entidade;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
 /**
  *
- * @author Xande
  */
 public class Discente extends Pessoa {
+// Propriedades
     private String matricula;
     List <Emprestimo> emprestimos;
 
-    //<editor-fold defaultstate="collapsed" desc="Construtores">
+//<editor-fold defaultstate="collapsed" desc="Construtores">
     public Discente() {
         emprestimos = new ArrayList();
     }
@@ -27,9 +22,8 @@ public class Discente extends Pessoa {
     }
 //</editor-fold>
     
-    
-    //<editor-fold defaultstate="collapsed" desc="Getters/Setters">
-        public String getMatricula() {
+//<editor-fold defaultstate="collapsed" desc="Getters/Setters">
+    public String getMatricula() {
         return matricula;
     }
 
@@ -44,21 +38,13 @@ public class Discente extends Pessoa {
     public void setEmprestimos(List<Emprestimo> emprestimos) {
         this.emprestimos = emprestimos;
     }
-
-    
 //</editor-fold>
-
+    
+// Métodos
     @Override
     public String toString() {
         return "Discente{" + "matricula=" + matricula 
-                + ", emprestimos=" + emprestimos //TODO verificar se nao esta criando um loop com o toString de Emprestimo
+                + ", emprestimos=" + emprestimos
                 + '}';
     }
-    
-    
-
-
-    
-    
-    
 }

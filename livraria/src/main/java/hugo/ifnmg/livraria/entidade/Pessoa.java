@@ -1,8 +1,7 @@
 package hugo.ifnmg.livraria.entidade;
 
 /**
- *
- *
+ * Classe base pessoa.
  */
 public class Pessoa {
 // Propriedades
@@ -63,7 +62,8 @@ public class Pessoa {
         text = ">>\\Pessoa={nome=" + nome
                 + ", cpf=" + cpf
                 + ", email=" + email
-                + ", endereco=" + endereco + "}";
+                + ", endereco=" + endereco
+                + "}";
         return text;
     }
 }

@@ -1,22 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package hugo.ifnmg.livraria.entidade;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
- * @author Xande
+ * Classe Funcionário.
  */
 public class Funcionario extends Pessoa{
+// Propriedades
     List <Emprestimo> emprestimos;
     //TODO relacionamentos
-
     
-    //<editor-fold defaultstate="collapsed" desc="Construtores">
+//<editor-fold defaultstate="collapsed" desc="Construtores">
     public Funcionario() {
         emprestimos = new ArrayList();
     }
@@ -27,7 +22,7 @@ public class Funcionario extends Pessoa{
     }
 //</editor-fold>
 
-    //<editor-fold defaultstate="collapsed" desc="Getter/Setter">
+//<editor-fold defaultstate="collapsed" desc="Getter/Setter">
     public List<Emprestimo> getEmprestimos() {
         return emprestimos;
     }
@@ -36,8 +31,4 @@ public class Funcionario extends Pessoa{
         this.emprestimos = emprestimos;
     }
 //</editor-fold>
-    
-    
-    
-    
 }

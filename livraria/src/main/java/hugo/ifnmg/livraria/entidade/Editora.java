@@ -1,23 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package hugo.ifnmg.livraria.entidade;
 
 /**
  *
- * @author Xande
  */
 public class Editora {
+// Propriedades
     private String nome;
     private String endereco;
     private Long telefone;
     private Long cnpj;
-
     
-    //<editor-fold defaultstate="collapsed" desc="Construtores">
-    public Editora() {
-    }
+//<editor-fold defaultstate="collapsed" desc="Construtores">
+    public Editora() {}
 
     public Editora(String nome, String endereco, Long telefone, Long cnpj) {
         this.nome = nome;
@@ -25,10 +19,9 @@ public class Editora {
         this.telefone = telefone;
         this.cnpj = cnpj;
     }
-    
 //</editor-fold>
 
-    //<editor-fold defaultstate="collapsed" desc="Getters/Setters">
+//<editor-fold defaultstate="collapsed" desc="Getters/Setters">
     public String getNome() {
         return nome;
     }
@@ -60,12 +53,9 @@ public class Editora {
     public void setCnpj(Long cnpj) {
         this.cnpj = cnpj;
     }
-    
-    
 //</editor-fold>
 
-    
-    //<editor-fold defaultstate="collapsed" desc="toString">
+// Métodos
     @Override
     public String toString() {
         return "Editora{" 
@@ -75,10 +65,4 @@ public class Editora {
                 + ", cnpj=" + cnpj 
                 + '}';
     }
-//</editor-fold>
-    
-    
-    
-    
-    
 }

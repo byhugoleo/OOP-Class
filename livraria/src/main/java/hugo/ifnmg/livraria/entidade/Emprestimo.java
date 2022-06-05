@@ -4,9 +4,9 @@ import java.time.LocalDate;
 
 /**
  *
- * @author byhugoleo
  */
 public class Emprestimo {
+// Propriedades
     private Funcionario funcionario;
     private Exemplar exemplar;
     private Discente discente;
@@ -15,7 +15,8 @@ public class Emprestimo {
     private LocalDate dataDevolucaoLimite;
     private String observacao;
 
-    //<editor-fold defaultstate="collapsed" desc="Construtores">
+//<editor-fold defaultstate="collapsed" desc="Construtores">
+    public Emprestimo() {}
     
     public Emprestimo(Funcionario funcionario, Exemplar exemplar, Discente discente, LocalDate dataEmprestimo, LocalDate dataDevolucao, LocalDate dataDevolucaoLimite, String observacao) {
         this.funcionario = funcionario;
@@ -26,13 +27,9 @@ public class Emprestimo {
         this.dataDevolucaoLimite = dataDevolucaoLimite;
         this.observacao = observacao;
     }
-    
-    public Emprestimo() {
-    }
-    
 //</editor-fold>
-    //TODO verificar se o getter/setter dos tipos LocalDate estao corretos
-    //<editor-fold defaultstate="collapsed" desc="Getters/Setters">
+    
+//<editor-fold defaultstate="collapsed" desc="Getters/Setters">
     public Funcionario getFuncionario() {
         return funcionario;
     }
@@ -89,22 +86,18 @@ public class Emprestimo {
         this.observacao = observacao;
     }
 //</editor-fold>
-    
-    //TODO verificar se o toString do tipo LocalDate esta correto
-    //<editor-fold defaultstate="collapsed" desc="toString">
+
+// Métodos
     @Override
     public String toString() {
-        return "Emprestimo{" 
-                + "funcionario=" + funcionario 
-                + ", exemplar=" + exemplar 
-                + ", discente=" + discente 
-                + ", dataEmprestimo=" + dataEmprestimo 
-                + ", dataDevolucao=" + dataDevolucao 
-                + ", dataDevolucaoLimite=" + dataDevolucaoLimite 
-                + ", observacao=" + observacao + '}';
+        return "Emprestimo{"
+                + "funcionario=" + funcionario
+                + ", exemplar=" + exemplar
+                + ", discente=" + discente
+                + ", dataEmprestimo=" + dataEmprestimo.toString()
+                + ", dataDevolucao=" + dataDevolucao.toString()
+                + ", dataDevolucaoLimite=" + dataDevolucaoLimite.toString()
+                + ", observacao=" + observacao
+                + '}';
     }
-    
-//</editor-fold>
-
-    
 }

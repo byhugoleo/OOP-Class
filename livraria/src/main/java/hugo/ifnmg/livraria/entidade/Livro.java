@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package hugo.ifnmg.livraria.entidade;
 
 import java.math.BigDecimal;
@@ -10,11 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
- * @author Xande
+ * Classe Livro.
  */
 public class Livro {
-    //TODO relacionamentos
     private String titulo;
     private Integer edicao;
     private List<Autor> autores;
@@ -25,8 +19,9 @@ public class Livro {
     private List<Exemplar> exemplares;
     private LocalDate dataCadastro;
     private BigDecimal preco;
+    //TODO relacionamentos
 
-    //<editor-fold defaultstate="collapsed" desc="Construtores">
+//<editor-fold defaultstate="collapsed" desc="Construtores">
         public Livro() {
         autores = new ArrayList();
     }
@@ -43,10 +38,9 @@ public class Livro {
         this.dataCadastro = dataCadastro;
         this.preco = preco;
     }
-
 //</editor-fold>
 
-    //<editor-fold defaultstate="collapsed" desc="Getters/Setters">
+//<editor-fold defaultstate="collapsed" desc="Getters/Setters">
     public String getTitulo() {
         return titulo;
     }
@@ -128,7 +122,7 @@ public class Livro {
     }
 //</editor-fold>
 
-    //<editor-fold defaultstate="collapsed" desc="toString">
+// Métodos
     @Override
     public String toString() {
         return "Livro{" 
@@ -144,10 +138,4 @@ public class Livro {
                 + ", preco=" + preco 
                 + '}';
     }
-//</editor-fold>
-
-    
-    
-    
-    
 }

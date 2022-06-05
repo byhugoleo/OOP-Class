@@ -1,27 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package hugo.ifnmg.livraria.entidade;
 
 import java.time.LocalDate;
 
 /**
  *
- * @author Xande
  */
 public class Autor {
+// Propriedades
     private String nome;
     private LocalDate dataNascimento;
     private LocalDate dataFalescimento;
     private String localFalescimento;
     private String biografia;
 
-    //<editor-fold defaultstate="collapsed" desc="Construtores">
-    public Autor() {
-    }
-    
-    
+//<editor-fold defaultstate="collapsed" desc="Construtores">
+    public Autor() {}
     
     public Autor(String nome, LocalDate dataNascimento, LocalDate dataFalescimento, String localFalescimento, String biografia) {
         this.nome = nome;
@@ -30,10 +23,9 @@ public class Autor {
         this.localFalescimento = localFalescimento;
         this.biografia = biografia;
     }
-    
 //</editor-fold>
     
-    //<editor-fold defaultstate="collapsed" desc="Getters/Setters">
+//<editor-fold defaultstate="collapsed" desc="Getters/Setters">
     public String getNome() {
         return nome;
     }
@@ -73,20 +65,17 @@ public class Autor {
     public void setBiografia(String biografia) {
         this.biografia = biografia;
     }
-
 //</editor-fold>
 
+// Métodos
     @Override
     public String toString() {
         return "Autor{" 
-                + "nome=" + nome 
-                + ", dataNascimento=" + dataNascimento 
-                + ", dataFalescimento=" + dataFalescimento 
-                + ", localFalescimento=" + localFalescimento 
-                + ", biografia=" + biografia 
+                + "nome=" + nome
+                + ", dataNascimento=" + dataNascimento.toString()
+                + ", dataFalescimento=" + dataFalescimento.toString()
+                + ", localFalescimento=" + localFalescimento
+                + ", biografia=" + biografia
                 + '}';
     }
-
-    
-    
 }

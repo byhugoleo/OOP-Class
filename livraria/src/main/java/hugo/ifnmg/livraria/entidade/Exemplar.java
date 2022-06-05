@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class Exemplar extends Entidade {
 // Propriedades
-    private Integer codigo;
+    private Long codigo;
     private Boolean disponivel;
     List<Emprestimo> emprestimos;
     
@@ -17,7 +17,7 @@ public class Exemplar extends Entidade {
         emprestimos = new ArrayList();
     }
 
-    public Exemplar(Integer codigo, Boolean disponivel, List<Emprestimo> emprestimos) {
+    public Exemplar(Long codigo, Boolean disponivel, List<Emprestimo> emprestimos) {
         this.codigo = codigo;
         this.disponivel = disponivel;
         this.emprestimos = emprestimos;
@@ -25,11 +25,11 @@ public class Exemplar extends Entidade {
 //</editor-fold>
 
 //<editor-fold defaultstate="collapsed" desc="Getters/Setters">
-    public Integer getCodigo() {
+    public Long getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(Integer codigo) {
+    public void setCodigo(Long codigo) {
         this.codigo = codigo;
     }
 

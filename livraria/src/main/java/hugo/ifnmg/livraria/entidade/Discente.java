@@ -4,15 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * Classe Discente.
  */
-public class Discente extends Pessoa {
+public final class Discente extends Pessoa {
 // Propriedades
     private String matricula;
     List <Emprestimo> emprestimos;
 
 //<editor-fold defaultstate="collapsed" desc="Construtores">
     public Discente() {
+        super();
         emprestimos = new ArrayList();
     }
     
@@ -41,6 +42,10 @@ public class Discente extends Pessoa {
 //</editor-fold>
     
 // Métodos
+    public void addEmprestimos(Emprestimo emprestimo) {
+        this.emprestimos.add(emprestimo);
+    }
+    
     @Override
     public String toString() {
         return "Discente{" + "matricula=" + matricula 

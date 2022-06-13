@@ -9,7 +9,6 @@ import java.util.List;
 public class Funcionario extends Pessoa {
 // Propriedades
     List <Emprestimo> emprestimos;
-    //TODO relacionamentos
     
 //<editor-fold defaultstate="collapsed" desc="Construtores">
     public Funcionario() {
@@ -31,4 +30,9 @@ public class Funcionario extends Pessoa {
         this.emprestimos = emprestimos;
     }
 //</editor-fold>
+
+// Métodos
+    public void addEmprestimos(Emprestimo emprestimo) {
+        this.emprestimos.add(emprestimo);
+    }
 }

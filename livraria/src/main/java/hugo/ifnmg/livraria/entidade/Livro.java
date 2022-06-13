@@ -19,7 +19,6 @@ public class Livro extends Entidade {
     private List<Exemplar> exemplares;
     private LocalDate dataCadastro;
     private BigDecimal preco;
-    //TODO relacionamentos
 
 //<editor-fold defaultstate="collapsed" desc="Construtores">
         public Livro() {
@@ -123,6 +122,14 @@ public class Livro extends Entidade {
 //</editor-fold>
 
 // Métodos
+    public void addAutores(Autor autor) {
+        this.autores.add(autor);
+    }
+    
+    public void addExemplares(Exemplar exemplar) {
+        exemplares.add(exemplar);
+    }
+    
     @Override
     public String toString() {
         return "Livro{" 

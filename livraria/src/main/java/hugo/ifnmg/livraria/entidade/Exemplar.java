@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 
+ * Classe Exemplar
  */
-public class Exemplar extends Entidade {
+public final class Exemplar extends Entidade {
 // Propriedades
     private Long codigo;
     private Boolean disponivel;
@@ -49,7 +49,12 @@ public class Exemplar extends Entidade {
         this.emprestimos = emprestimos;
     }
 //</editor-fold>
-  
+
+// Métodos
+    public void addEmprestimos(Emprestimo emprestimo) {
+        this.emprestimos.add(emprestimo);
+    }
+    
     @Override
     public String toString() {
         return "Exemplar{"

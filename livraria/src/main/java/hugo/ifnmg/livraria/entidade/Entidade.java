@@ -1,13 +1,13 @@
 package hugo.ifnmg.livraria.entidade;
 
 /**
- * Aspects common to all entities managed by the system.
+ * Aspectos comum para todas as entidades manuseadas pelo sistema.
  */
 public abstract class Entidade {
 // Propriedades
     private Long ID;
     
-//<editor-fold defaultstate="collapsed" desc="Constructors">
+//<editor-fold defaultstate="collapsed" desc="Construtores">
     public Entidade() {}
     
     public Entidade(Long ID) {

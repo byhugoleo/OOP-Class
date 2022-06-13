@@ -1,7 +1,7 @@
 package hugo.ifnmg.livraria.entidade;
 
 /**
- *
+ * Classe Gênero.
  */
 public class Genero extends Entidade {
 // Propriedades

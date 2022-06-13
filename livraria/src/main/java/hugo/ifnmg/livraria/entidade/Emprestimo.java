@@ -3,9 +3,9 @@ package hugo.ifnmg.livraria.entidade;
 import java.time.LocalDate;
 
 /**
- *
+ * Classe Emprestimo.
  */
-public class Emprestimo extends Entidade {
+public final class Emprestimo extends Entidade {
 // Propriedades
     private Funcionario funcionario;
     private Exemplar exemplar;

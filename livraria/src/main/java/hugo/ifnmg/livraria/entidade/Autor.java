@@ -3,9 +3,9 @@ package hugo.ifnmg.livraria.entidade;
 import java.time.LocalDate;
 
 /**
- *
+ * Classe Autor.
  */
-public class Autor extends Entidade {
+public final class Autor extends Entidade {
 // Propriedades
     private String nome;
     private LocalDate dataNascimento;

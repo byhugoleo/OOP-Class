@@ -7,7 +7,7 @@ import hugo.ifnmg.bike.builder.builders.BikeBuilder;
 /**
  * Class for tests.
  * 
- * @author hugol
+ * @author byhugoleo
  */
 public class Program {
 

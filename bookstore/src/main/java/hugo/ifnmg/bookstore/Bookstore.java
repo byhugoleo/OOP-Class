@@ -4,10 +4,6 @@ import hugo.ifnmg.bookstore.entity.Author;
 import hugo.ifnmg.bookstore.repository.AuthorDAO;
 import java.time.LocalDate;
 import java.time.Month;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.function.IntPredicate;
-import java.util.function.Predicate;
 
 /**
  * Class for tests.

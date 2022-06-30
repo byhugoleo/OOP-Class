@@ -36,9 +36,10 @@ public interface IDataAcessObject<E, K> {
     public List<E> getAll();
     
     /**
-     *
-     * @param ID
-     * @return 
+     * Delete an Entity from the database.
+     * 
+     * @param ID Primary key.
+     * @return True if the data was removed from database and false if not.
      */
     public Boolean delete(K ID);
 }

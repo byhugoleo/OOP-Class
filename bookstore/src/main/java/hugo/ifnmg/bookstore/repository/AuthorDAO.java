@@ -21,7 +21,6 @@ public class AuthorDAO extends DataAcessObject<Author, Long> {
     `DEATHDATE` date DEFAULT NULL,
     `DEATHPLACE` varchar(100) DEFAULT NULL,
     `BIOGRAPHY` varchar(300) NOT NULL,
-    `DELETED` tinyint(1) DEFAULT '0',
     PRIMARY KEY (`ID`),
     UNIQUE KEY `ID` (`ID`),
     UNIQUE KEY `NAME` (`NAME`,`BIRTHDATE`,`DEATHDATE`)
@@ -38,38 +37,37 @@ public class AuthorDAO extends DataAcessObject<Author, Long> {
     public String getUpdateStatement() {
         return "UPDATE AUTHOR"
                 + "SET NAME = ?, BIRTHDATE = ?, DEATHDATE = ?, DEATHPLACE = ?, BIOGRAPHY = ?"
-                + "WHERE ID = ? AND DELETED = FALSE;";
+                + "WHERE ID = ?;";
     }
 
     @Override
     public String getSelectStatementByID() {
         return "SELECT ID, NAME, BIRTHDATE, DEATHDATE, DEATHPLACE, BIOGRAPHY"
                 + "FROM AUTHOR"
-                + "WHERE ID = ? AND DELETED = FALSE;";
+                + "WHERE ID = ?;";
     }
 
     @Override
     public String getSelectStatementAll() {
         return "SELECT ID, NAME, BIRTHDATE, DEATHDATE, DEATHPLACE, BIOGRAPHY"
-                + "FROM AUTHOR"
-                + "WHERE DELETED = FALSE;";
+                + "FROM AUTHOR;";
     }
 
     @Override
-    public String getDeleteStatement() {
-        return "UPDATE AUTHOR SET DELETED = TRUE WHERE ID = ?;";
+    public String getDeleteStatementByID() {
+        return "DELETE FROM AUTHOR WHERE ID = ?;";
     }
 
     @Override
-    public void buildStatement(PreparedStatement pst, Author e) {
+    public void buildStatement(PreparedStatement pst, Author a) {
         try {
-            pst.setString(1, e.getName());
-            pst.setObject(2, Date.valueOf(e.getBirthdate()), java.sql.Types.DATE);
-            pst.setObject(3, Date.valueOf(e.getDeathDate()), java.sql.Types.DATE);
-            pst.setObject(4, e.getDeathPlace(), java.sql.Types.VARCHAR);
-            pst.setObject(5, e.getBiography(), java.sql.Types.VARCHAR);
-            if (e.getID() != null && e.getID() != 0)
-                pst.setLong(6, e.getID());
+            pst.setString(1, a.getName());
+            pst.setObject(2, Date.valueOf(a.getBirthdate()), java.sql.Types.DATE);
+            pst.setObject(3, Date.valueOf(a.getDeathDate()), java.sql.Types.DATE);
+            pst.setString(4, a.getDeathPlace());
+            pst.setString(5, a.getBiography());
+            if (a.getID() != null && a.getID() != 0)
+                pst.setLong(6, a.getID());
         } catch (SQLException ex) {
             System.out.println(">> Exception: " + ex);
         }
@@ -78,7 +76,6 @@ public class AuthorDAO extends DataAcessObject<Author, Long> {
     @Override
     public Author buildEntity(ResultSet rst) {
         Author a = new Author();
-
         try {
             a.setID(rst.getLong("ID"));
             a.setName(rst.getString("NAME"));
@@ -89,7 +86,6 @@ public class AuthorDAO extends DataAcessObject<Author, Long> {
         } catch (SQLException ex) {
             Logger.getLogger(AuthorDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
         return a;
     }
 }

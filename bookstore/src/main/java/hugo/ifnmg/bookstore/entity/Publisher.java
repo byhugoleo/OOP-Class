@@ -3,7 +3,7 @@ package hugo.ifnmg.bookstore.entity;
 /**
  * Entity that represents a Publisher.
  */
-public final class Publisher extends Entity{
+public final class Publisher extends Entity {
 // Properties
     private String name;
     private String address;

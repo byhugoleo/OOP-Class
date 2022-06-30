@@ -45,7 +45,6 @@ public class Employee extends Person {
                 + ", email=" + getEmail()
                 + ", password=" + getPassword()
                 + ", address=" + getAddress()
-                //TODO: Imprimir os empréstismos sem entrar em loop infinito.
                 + ", loans=" + loans
                 + '}';
     }

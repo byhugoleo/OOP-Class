@@ -92,10 +92,12 @@ public final class Loan extends Entity {
     public String toString() {
         return "Loan{"
                 + "ID=" + getID()
-                + ", employee=" + employee
-                //TODO: imprimir a cópia do livro sem entrar em loop infinito.
-                + ", copyOfBook=" + copyOfBook
-                + ", student=" + student
+                + ", employeeID = "+ employee.getID()
+                + ", employeeName=" + employee.getName()
+                + ", copyOfBookCode=" + copyOfBook.getCode()
+                + ", copyofBookAvailable=" + (copyOfBook.getAvailable()? "Available" : "Unavailable")
+                + ", student=" + student.getName()
+                + ", studentID="+ student.getID()
                 + ", loanDate=" + loanDate.toString()
                 + ", returnDate=" + returnDate.toString()
                 + ", deadlineReturnDate=" + deadlineReturnDate.toString()

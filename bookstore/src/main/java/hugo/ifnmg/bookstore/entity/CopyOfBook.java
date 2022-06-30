@@ -61,7 +61,6 @@ public final class CopyOfBook extends Entity {
                 + "ID=" + getID()
                 + ", code=" + code
                 + ", available=" + available
-                //TODO: Imprimir os empréstismos sem entrar em loop infinito.
                 + ", loans=" + loans
                 + '}';
     }

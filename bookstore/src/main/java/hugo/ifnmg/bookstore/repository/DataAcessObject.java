@@ -1,7 +1,6 @@
 package hugo.ifnmg.bookstore.repository;
 
 import hugo.ifnmg.bookstore.entity.Entity;
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -22,8 +21,8 @@ public abstract class DataAcessObject<E, K> implements IDataAcessObject<E, K> {
         Long ID = 0L;
         if (((Entity) e).getID() == null || ((Entity) e).getID() == 0) {
             try (
-                Connection c = DBConnection.getConnection();
-                PreparedStatement pst = c.prepareStatement(getInsertStatement(), Statement.RETURN_GENERATED_KEYS);
+                PreparedStatement pst = DBConnection.getConnection()
+                        .prepareStatement(getInsertStatement(), Statement.RETURN_GENERATED_KEYS);
             ) {
                 buildStatement(pst, e);
                 pst.executeUpdate();
@@ -35,8 +34,8 @@ public abstract class DataAcessObject<E, K> implements IDataAcessObject<E, K> {
             }
         } else {
             try (
-                Connection c = DBConnection.getConnection();
-                PreparedStatement pst = c.prepareStatement(getUpdateStatement());
+                PreparedStatement pst = DBConnection.getConnection()
+                        .prepareStatement(getUpdateStatement());
                 ) {
                     buildStatement(pst, e);
                     pst.executeUpdate();
@@ -51,8 +50,8 @@ public abstract class DataAcessObject<E, K> implements IDataAcessObject<E, K> {
     @Override
     public E getByID(K ID) {
         try (
-            Connection c = DBConnection.getConnection();
-            PreparedStatement pst= c.prepareStatement(getSelectStatementByID());
+            PreparedStatement pst= DBConnection.getConnection()
+                    .prepareStatement(getSelectStatementByID());
         ) {
             pst.setLong(1, (Long) ID);
             ResultSet rst = pst.executeQuery();
@@ -69,8 +68,8 @@ public abstract class DataAcessObject<E, K> implements IDataAcessObject<E, K> {
         ArrayList<E> entities = new ArrayList<>();
 
         try (
-            Connection c = DBConnection.getConnection();
-            PreparedStatement pst = c.prepareStatement(getSelectStatementAll());
+            PreparedStatement pst = DBConnection.getConnection()
+                    .prepareStatement(getSelectStatementAll());
         ) {
             ResultSet rst = pst.executeQuery();
             while (rst.next())
@@ -88,8 +87,8 @@ public abstract class DataAcessObject<E, K> implements IDataAcessObject<E, K> {
     public Boolean delete(K ID) {
         if ((Long) ID != 0 && (Long) ID != null) {
             try (
-                Connection c = DBConnection.getConnection();
-                PreparedStatement pst = c.prepareStatement(getDeleteStatementByID());
+                PreparedStatement pst = DBConnection.getConnection()
+                        .prepareStatement(getDeleteStatementByID());
             ) {
                 pst.setLong(1, (Long) ID);
                 pst.executeUpdate();

@@ -23,28 +23,28 @@ public class GenreDAO extends DataAcessObject<Genre, Long> {
     @Override
     public String getInsertStatement() {
         return "INSERT INTO GENRE"
-                + "(NAME)"
-                + "VALUES (?);";
+                + " (NAME)"
+                + " VALUES (?);";
     }
 
     @Override
     public String getUpdateStatement() {
         return "UPDATE GENRE"
-                + "SET NAME = ?"
-                + "WHERE ID = ?;";
+                + " SET NAME = ?"
+                + " WHERE ID = ?;";
     }
 
     @Override
     public String getSelectStatementByID() {
         return "SELECT ID, NAME"
-                + "FROM GENRE"
-                + "WHERE ID = ?;";
+                + " FROM GENRE"
+                + " WHERE ID = ?;";
     }
 
     @Override
     public String getSelectStatementAll() {
         return "SELECT ID, NAME"
-                + "FROM GENRE;";
+                + " FROM GENRE;";
     }
 
     @Override

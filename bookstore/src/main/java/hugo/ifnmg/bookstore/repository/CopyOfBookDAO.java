@@ -24,28 +24,28 @@ public class CopyOfBookDAO extends DataAcessObject<CopyOfBook, Long> {
     @Override
     public String getInsertStatement() {
         return "INSERT INTO COPYOFBOOK"
-                + "(CODE, AVAILABLE)"
-                + "VALUES (?, ?);";
+                + " (CODE, AVAILABLE)"
+                + " VALUES (?, ?);";
     }
 
     @Override
     public String getUpdateStatement() {
         return "UPDATE COPYOFBOOK"
-                + "SET CODE = ?, AVAILABLE = ?"
-                + "WHERE ID = ?;";
+                + " SET CODE = ?, AVAILABLE = ?"
+                + " WHERE ID = ?;";
     }
 
     @Override
     public String getSelectStatementByID() {
         return "SELECT ID, CODE, AVAILABLE"
-                + "FROM COPYOFBOOK"
-                + "WHERE ID = ?;";
+                + " FROM COPYOFBOOK"
+                + " WHERE ID = ?;";
     }
 
     @Override
     public String getSelectStatementAll() {
         return "SELECT ID, CODE, AVAILABLE"
-                + "FROM COPYOFBOOK;";
+                + " FROM COPYOFBOOK;";
     }
 
     @Override

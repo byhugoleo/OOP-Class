@@ -30,28 +30,28 @@ public class StudentDAO extends DataAcessObject<Student, Long> {
     @Override
     public String getInsertStatement() {
         return "INSERT INTO STUDENT"
-                + "(ENROLLMENT, NAME, CPF, EMAIL, PASSWORD, ADDRESS)"
-                + "VALUES (?, ?, ?, ?, ?, ?);";
+                + " (ENROLLMENT, NAME, CPF, EMAIL, PASSWORD, ADDRESS)"
+                + " VALUES (?, ?, ?, ?, ?, ?);";
     }
 
     @Override
     public String getUpdateStatement() {
         return "UPDATE STUDENT"
-                + "SET ENROLLMENT = ?, NAME = ?, CPF = ?, EMAIL = ?, PASSWORD = ?, ADDRESS = ?"
-                + "WHERE ID = ?;";
+                + " SET ENROLLMENT = ?, NAME = ?, CPF = ?, EMAIL = ?, PASSWORD = ?, ADDRESS = ?"
+                + " WHERE ID = ?;";
     }
 
     @Override
     public String getSelectStatementByID() {
         return "SELECT ID, ENROLLMENT, NAME, CPF, EMAIL, PASSWORD, ADDRESS"
-                + "FROM STUDENT"
-                + "WHERE ID = ?;";
+                + " FROM STUDENT"
+                + " WHERE ID = ?;";
     }
 
     @Override
     public String getSelectStatementAll() {
         return "SELECT ID, STUDENT, NAME, CPF, EMAIL, PASSWORD, ADDRESS"
-                + "FROM STUDENT;";
+                + " FROM STUDENT;";
     }
 
     @Override

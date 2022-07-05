@@ -30,28 +30,28 @@ public class BookDAO extends DataAcessObject<Book,Long>{
     @Override
     public String getInsertStatement() {
         return "INSERT INTO BOOK"
-                + "(TITLE, EDITION, NUMBERPAGES, PUBLICATIONDATE, PRICE)"
-                + "VALUES (?, ?, ?, ?, ?);";
+                + " (TITLE, EDITION, NUMBERPAGES, PUBLICATIONDATE, PRICE)"
+                + " VALUES (?, ?, ?, ?, ?);";
     }
 
     @Override
     public String getUpdateStatement() {
         return "UPDATE BOOK"
-                + "SET TITLE = ?, EDITION= ?, NUMBERPAGES= ?, PUBLICATIONDATE = ?, PRICE = ?"
-                + "WHERE ID = ?;";
+                + " SET TITLE = ?, EDITION= ?, NUMBERPAGES= ?, PUBLICATIONDATE = ?, PRICE = ?"
+                + " WHERE ID = ?;";
     }
 
     @Override
     public String getSelectStatementByID() {
         return "SELECT ID, TITLE, EDITION, NUMBERPAGES, PUBLICATIONDATE, PRICE"
-                + "FROM BOOK"
-                + "WHERE ID = ?;";
+                + " FROM BOOK"
+                + " WHERE ID = ?;";
     }
 
     @Override
     public String getSelectStatementAll() {
         return "SELECT ID, TITLE, EDITION, NUMBERPAGES, PUBLICATIONDATE, PRICE"
-                + "FROM BOOK;";
+                + " FROM BOOK;";
     }
 
     @Override

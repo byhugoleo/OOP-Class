@@ -26,28 +26,28 @@ public class PublisherDAO extends DataAcessObject<Publisher, Long> {
     @Override
     public String getInsertStatement() {
         return "INSERT INTO PUBLISHER"
-                + "(NAME, ADDRESS, PHONENUMBER, CNPJ)"
-                + "VALUES (?, ?, ?, ?);";
+                + " (NAME, ADDRESS, PHONENUMBER, CNPJ)"
+                + " VALUES (?, ?, ?, ?);";
     }
 
     @Override
     public String getUpdateStatement() {
         return "UPDATE PUBLISHER"
-                + "SET NAME = ?, ADDRESS = ?, PHONENUMBER = ?, CNPJ = ?"
-                + "WHERE ID = ?;";
+                + " SET NAME = ?, ADDRESS = ?, PHONENUMBER = ?, CNPJ = ?"
+                + " WHERE ID = ?;";
     }
 
     @Override
     public String getSelectStatementByID() {
         return "SELECT ID, NAME, ADDRESS, PHONENUMBER, CNPJ"
-                + "FROM PUBLISHER"
-                + "WHERE ID = ?;";
+                + " FROM PUBLISHER"
+                + " WHERE ID = ?;";
     }
 
     @Override
     public String getSelectStatementAll() {
         return "SELECT ID, NAME, ADDRESS, PHONENUMBER, CNPJ"
-                + "FROM PUBLISHER;";
+                + " FROM PUBLISHER;";
     }
 
     @Override

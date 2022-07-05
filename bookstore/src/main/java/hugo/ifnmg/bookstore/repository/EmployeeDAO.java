@@ -28,29 +28,29 @@ public class EmployeeDAO extends DataAcessObject<Employee, Long> {
     @Override
     public String getInsertStatement() {
         return "INSERT INTO EMPLOYEE"
-                + "(NAME, CPF, EMAIL, PASSWORD, ADDRESS)"
-                + "VALUES (?, ?, ?, ?, ?);";
+                + " (NAME, CPF, EMAIL, PASSWORD, ADDRESS)"
+                + " VALUES (?, ?, ?, ?, ?);";
     }
 
     @Override
     public String getUpdateStatement() {
         return "UPDATE EMPLOYEE"
-                + "SET NAME = ?, CPF = ?, EMAIL = ?, PASSWORD = ?, ADDRESS = ?"
-                + "WHERE ID = ?;";
+                + " SET NAME = ?, CPF = ?, EMAIL = ?, PASSWORD = ?, ADDRESS = ?"
+                + " WHERE ID = ?;";
     }
 
     @Override
     public String getSelectStatementByID() {
         return "SELECT ID, NAME, CPF, EMAIL, PASSWORD, ADDRESS"
-                + "FROM EMPLOYEE"
-                + "WHERE ID = ?;";
+                + " FROM EMPLOYEE"
+                + " WHERE ID = ?;";
     }
 
     @Override
     public String getSelectStatementAll() {
         return "SELECT ID, NAME, CPF, EMAIL, PASSWORD, ADDRESS"
-                + "FROM EMPLOYEE"
-                + "WHERE DELETED = FALSE;";
+                + " FROM EMPLOYEE"
+                + " WHERE DELETED = FALSE;";
     }
 
     @Override

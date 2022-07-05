@@ -27,28 +27,28 @@ public class LoanDAO extends DataAcessObject<Loan, Long> {
     @Override
     public String getInsertStatement() {
         return "INSERT INTO LOAN"
-                + "(LOANDATE, RETURNDATE, DEADLINERETURNDATE, NOTE)"
-                + "VALUES (?, ?, ?, ?);";
+                + " (LOANDATE, RETURNDATE, DEADLINERETURNDATE, NOTE)"
+                + " VALUES (?, ?, ?, ?);";
     }
 
     @Override
     public String getUpdateStatement() {
         return "UPDATE LOAN"
-                + "LOANDATE = ?, RETURNDATE = ?, DEADLINERETURNDATE = ?, NOTE = ?"
-                + "WHERE ID = ?;";
+                + " LOANDATE = ?, RETURNDATE = ?, DEADLINERETURNDATE = ?, NOTE = ?"
+                + " WHERE ID = ?;";
     }
 
     @Override
     public String getSelectStatementByID() {
         return "SELECT ID, LOANDATE, RETURNDATE, DEADLINERETURNDATE, NOTE"
-                + "FROM LOAN"
-                + "WHERE ID = ?;";
+                + " FROM LOAN"
+                + " WHERE ID = ?;";
     }
 
     @Override
     public String getSelectStatementAll() {
         return "SELECT ID, LOANDATE, RETURNDATE, DEADLINERETURNDATE, NOTE"
-                + "FROM LOAN;";
+                + " FROM LOAN;";
     }
 
     @Override

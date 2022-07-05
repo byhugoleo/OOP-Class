@@ -1,6 +1,9 @@
 package hugo.ifnmg.bookstore.repository;
 
 import hugo.ifnmg.bookstore.entity.Author;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -29,28 +32,28 @@ public class AuthorDAO extends DataAcessObject<Author, Long> {
     @Override
     public String getInsertStatement() {
         return "INSERT INTO AUTHOR"
-                + "(NAME, BIRTHDATE, DEATHDATE, DEATHPLACE, BIOGRAPHY)"
-                + "VALUES (?, ?, ?, ?, ?);";
+                + " (NAME, BIRTHDATE, DEATHDATE, DEATHPLACE, BIOGRAPHY)"
+                + " VALUES (?, ?, ?, ?, ?);";
     }
 
     @Override
     public String getUpdateStatement() {
         return "UPDATE AUTHOR"
-                + "SET NAME = ?, BIRTHDATE = ?, DEATHDATE = ?, DEATHPLACE = ?, BIOGRAPHY = ?"
-                + "WHERE ID = ?;";
+                + " SET NAME = ?, BIRTHDATE = ?, DEATHDATE = ?, DEATHPLACE = ?, BIOGRAPHY = ?"
+                + " WHERE ID = ?;";
     }
 
     @Override
     public String getSelectStatementByID() {
         return "SELECT ID, NAME, BIRTHDATE, DEATHDATE, DEATHPLACE, BIOGRAPHY"
-                + "FROM AUTHOR"
-                + "WHERE ID = ?;";
+                + " FROM AUTHOR"
+                + " WHERE ID = ?;";
     }
 
     @Override
     public String getSelectStatementAll() {
         return "SELECT ID, NAME, BIRTHDATE, DEATHDATE, DEATHPLACE, BIOGRAPHY"
-                + "FROM AUTHOR;";
+                + " FROM AUTHOR;";
     }
 
     @Override

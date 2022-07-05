@@ -1,9 +1,6 @@
 package hugo.ifnmg.bookstore.repository;
 
 import hugo.ifnmg.bookstore.entity.Author;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
